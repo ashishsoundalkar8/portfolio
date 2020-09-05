@@ -85,12 +85,40 @@
             width: 100%;
             text-align: center;
         }
+
+
+        .loader h1 {
+            position: relative;
+            color: rgba(0, 0, 0, .3);
+            font-size: 1.5em
+        }
+
+        .loader h1:before {
+            content: attr(data-text);
+            position: absolute;
+            overflow: hidden;
+            max-width: 7em;
+            white-space: nowrap;
+            color: #004dfd;
+            animation: loading 8s linear;
+            animation-iteration-count: infinite;
+        }
+
+        .load-main.slow {
+            display: none;
+        }
+
+        @keyframes loading {
+            0% {
+                max-width: 0;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div id="loader" class="loader">
-        <h1 data-text="CodeSquadTech....">This Might Take a While</h1>
+        <h1 data-text="This Might Take a While...">This Might Take a While...</h1>
         <p>please wait while we load the complete page for you....</p>
     </div>
     <div class="fixed-top">
@@ -99,7 +127,8 @@
                 alt="dribbble"></a>
         <a class="icons" href="https://www.behance.net/ashishsoun9cb6" target="_blank"><img
                 src="./icons/behance-logo.svg" alt="behance"></a>
-        <a class="icons" href="https://wa.me/919987077087?text=I%20would%20like%20to%20connect%20with%20you%20regarding%20your%20portfolio."
+        <a class="icons"
+            href="https://wa.me/919987077087?text=I%20would%20like%20to%20connect%20with%20you%20regarding%20your%20portfolio."
             target="_blank"><img src="./icons/whatsapp.svg" alt="whatsapp"></a>
     </div>
     <img src="./images/mobile-mockup.png" alt="first screens">
@@ -115,7 +144,7 @@
         });
         $(function () {
             $(".startTyper").typed({
-                strings: ["CodeSquadTech", "Responsive WEBSITES and APPS on the GO !!!"],
+                strings: ["This Might Take a While...", "This Might Take a While..."],
                 typeSpeed: 50, // typing speed
                 backDelay: 100, // pause before backspacing
                 loop: true, // loop on or off (true or false)
