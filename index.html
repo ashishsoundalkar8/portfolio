@@ -142,27 +142,27 @@
     </div>
     <script src="./jquery.min.js"></script>
     <script>
-        // $(window).load(function () {
-        //     // Animate loader off screen
-        //     $(".loader").fadeOut("slow");
-        //     $(".load-main").removeClass("slow");
-        // });
-        $("#loader").show();
-        var nImages = $("#body").length;
-        var loadCounter = 0;
-        //binds onload event listner to images
-        $("#body").on("load", function () {
-            loadCounter++;
-            if (nImages == loadCounter) {
-                $(this).parent().show();
-                $("#loader").hide();
-            }
-        }).each(function () {
-
-            // attempt to defeat cases where load event does not fire
-            // on cached images
-            if (this.complete) $(this).trigger("load");
+        $(window).load(function () {
+            // Animate loader off screen
+            $(".loader").fadeOut("slow");
+            $(".load-main").removeClass("slow");
         });
+        // $("#loader").show();
+        // var nImages = $("#body").length;
+        // var loadCounter = 0;
+        // //binds onload event listner to images
+        // $("#body").on("load", function () {
+        //     loadCounter++;
+        //     if (nImages == loadCounter) {
+        //         $(this).parent().show();
+        //         $("#loader").hide();
+        //     }
+        // }).each(function () {
+
+        //     // attempt to defeat cases where load event does not fire
+        //     // on cached images
+        //     if (this.complete) $(this).trigger("load");
+        // });
         $(function () {
             $(".startTyper").typed({
                 strings: ["10MB", "10MB"],
