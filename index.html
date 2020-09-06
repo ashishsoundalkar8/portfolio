@@ -92,7 +92,7 @@
         .loader h1 {
             position: relative;
             color: rgba(0, 0, 0, .3);
-            font-size: 1.5em
+            font-size: 5.5em
         }
 
         .loader h1:before {
@@ -102,7 +102,7 @@
             max-width: 7em;
             white-space: nowrap;
             color: #004dfd;
-            animation: loading 4s linear;
+            animation: loading 20s linear;
             animation-iteration-count: infinite;
         }
 
@@ -120,7 +120,8 @@
 
 <body>
     <div id="loader" class="loader">
-        <h1 data-text="This Might Take a While...">This Might Take a While...</h1>
+        <h1 data-text="10MB">10MB</h1>
+        <p>This Might Take a While...</p>
         <p>please wait while we load the complete page for you....</p>
     </div>
     <div id="body">
@@ -164,9 +165,9 @@
         });
         $(function () {
             $(".startTyper").typed({
-                strings: ["This Might Take a While...", "This Might Take a While..."],
-                typeSpeed: 80, // typing speed
-                backDelay: 150, // pause before backspacing
+                strings: ["10MB", "10MB"],
+                typeSpeed: 30, // typing speed
+                backDelay: 100, // pause before backspacing
                 loop: true, // loop on or off (true or false)
                 loopCount: false, // number of loops, false = infinite
             });
