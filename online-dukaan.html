@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Portfolio - Online Dukaan Screens</title>
     <link rel="icon" type="image/svg" href="./favicon.svg">
-    <meta name="theme-color" content="#313743">
+    <meta name="theme-color" content="#004dfd">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         html,
@@ -15,21 +15,10 @@
             width: 100%;
             height: 100%;
             font-family: 'Poppins', sans-serif !important;
-            background: #EBEEF2;
         }
 
         * {
             box-sizing: border-box;
-        }
-
-        a.card-cont,
-        a.card-cont:hover,
-        a.card-cont:focus {
-            border: 0;
-        }
-
-        a.card-cont .card:hover {
-            box-shadow: 2px 2px 19px 9px #2625230f;
         }
 
         img {
@@ -39,86 +28,21 @@
             display: flex;
         }
 
-        @media (max-width: 480px) and (min-width: 320px) {
-            .card {
-                margin: 10px;
-                border-radius: 5px;
-                overflow: hidden;
-                width: 100%;
-                background: #ffffff;
-                float: left;
-            }
-
-            a.card-cont {
-                padding: 0;
-                background: transparent;
-                border-radius: 0;
-                margin: 0;
-                float: left;
-                width: calc(100% - 20px) !important;
-            }
-
-            a.card-cont .card img {
-                width: 100%;
-            }
-
-            .container {
-                margin-top: 100px;
-                margin-left: 0;
-            }
-        }
-
-
-        a.card-cont {
-            padding: 0;
-            background: transparent;
-            border-radius: 0;
-            margin: 0;
-            float: left;
-            width: calc(20% - 20px);
-        }
-
-        .container {
-            margin-top: 10px;
-            margin-left: 10px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        a.card-cont .card img {
-            width: 100%;
-        }
-
-        .card {
-            margin: 10px;
-            border-radius: 5px;
-            overflow: hidden;
-            background: #ffffff;
-            width: 100%;
-        }
-
-        p {
-            color: #262523;
-            font-size: 14px;
-        }
-
         .fixed-top {
-            position: relative;
+            position: fixed;
             top: 0;
             left: 0;
             margin: 10px;
             width: 100%;
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
         }
 
         a {
             padding: 12px 30px;
             background: #004dfd;
             border-radius: 100px;
-            margin: 10px 10px 10px 0;
+            margin: 10px;
             border: 2px solid #eee;
             color: white;
             text-decoration: none;
@@ -196,7 +120,7 @@
 
 <body>
     <div id="loader" class="loader">
-        <h1 data-text="01MB">01MB</h1>
+        <h1 data-text="10MB">10MB</h1>
         <p>This Might Take a While...</p>
         <p>please wait while we load the complete page for you....</p>
     </div>
@@ -211,23 +135,11 @@
                 href="https://wa.me/919987077087?text=I%20would%20like%20to%20connect%20with%20you%20regarding%20your%20portfolio."
                 target="_blank"><img src="./icons/whatsapp.svg" alt="whatsapp"></a>
         </div>
-        <div class="container">
-            <a href="http://portfolio.codesquadtech.com/online-dukaan.html" target="_blank" class="card-cont">
-                <div class="card">
-                    <img src="./images/cover-od.png" alt="online dukaan">
-                    <p>Online Dukaan Case Study</p>
-                </div>
-            </a>
-            <a href="http://portfolio.codesquadtech.com/food-app.html" target="_blank" class="card-cont">
-                <div class="card">
-                    <img src="./images/cover-fa.png" alt="food web app">
-                    <p>Online Dukaan Case Study</p>
-                </div>
-            </a>
-        </div>
+        <img src="./images/online-dukaan/mobile-mockup.png" alt="first screens">
+        <img src="./images/online-dukaan/typography.png" alt="typography screens">
+        <img src="./images/online-dukaan/user-screens.png" alt="user screens">
+        <img src="./images/online-dukaan/thank-you.png" alt="thank you screens">
     </div>
-    <p style="margin: 20px 0 60px;display:flex;font-size: 14px;font-weight: bold;justify-content: center;">More Case
-        Studies Coming Soon</p>
     <script src="./jquery.min.js"></script>
     <script>
         $(window).load(function () {
@@ -253,7 +165,7 @@
         // });
         $(function () {
             $(".startTyper").typed({
-                strings: ["01MB", "01MB"],
+                strings: ["10MB", "10MB"],
                 typeSpeed: 30, // typing speed
                 backDelay: 100, // pause before backspacing
                 loop: true, // loop on or off (true or false)
