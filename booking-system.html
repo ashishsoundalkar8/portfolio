@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Booking System App Screens</title>
+    <link rel="icon" type="image/svg" href="./favicon.svg">
+    <meta name="theme-color" content="#f29422">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        html,
+        body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Poppins', sans-serif !important;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            margin: 0;
+            display: flex;
+        }
+
+        .fixed-top {
+            position: fixed;
+            top: 0;
+            left: 0;
+            margin: 10px;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        a {
+            padding: 12px 30px;
+            background-image: linear-gradient(to right, #f29422, #f78834, #f87c43, #f77251, #f3695e);
+            border-radius: 100px;
+            margin: 10px;
+            border: 2px solid #eee;
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        a.icons {
+            padding: 10px;
+        }
+
+
+        a img {
+            width: 25px;
+        }
+
+        div#loader {
+            height: 100vh;
+            width: 100%;
+            z-index: 99999999999999;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 18px;
+            width: 100%;
+            text-align: center;
+            margin: 0 0 5px;
+        }
+
+        p {
+            width: 100%;
+            text-align: center;
+        }
+
+
+        .loader h1 {
+            position: relative;
+            color: rgba(0, 0, 0, .3);
+            font-size: 5.5em
+        }
+
+        .loader h1:before {
+            content: attr(data-text);
+            position: absolute;
+            overflow: hidden;
+            max-width: 7em;
+            white-space: nowrap;
+            color: #f29422;            
+            animation: loading 20s linear;
+            animation-iteration-count: infinite;
+        }
+
+        .load-main.slow {
+            display: none;
+        }
+
+        @keyframes loading {
+            0% {
+                max-width: 0;
+            }
+        }
+        div#body {
+    min-height: 100vh;
+    background: #f6f7f9;
+}
+
+
+    </style>
+</head>
+
+<body>
+    <div id="loader" class="loader">
+        <h1 data-text="01MB">01MB</h1>
+        <p>This Might Take a While...</p>
+        <p>please wait while we load the complete page for you....</p>
+    </div>
+    <div id="body">
+        <div class="fixed-top">
+            <a href="https://codesquadtech.com/" target="_blank">For more visit <b>&nbsp; codesquadtech.com</b></a>
+            <a class="icons" href="https://dribbble.com/ashish1995/" target="_blank"><img src="./icons/dribbble.svg"
+                    alt="dribbble"></a>
+            <a class="icons" href="https://www.behance.net/ashishsoun9cb6" target="_blank"><img
+                    src="./icons/behance-logo.svg" alt="behance"></a>
+            <a class="icons"
+                href="https://wa.me/919987077087?text=I%20would%20like%20to%20connect%20with%20you%20regarding%20your%20portfolio."
+                target="_blank"><img src="./icons/whatsapp.svg" alt="whatsapp"></a>
+        </div>
+        <img src="./images/booking-system/login-presentation.png" alt="banner screen">
+        <img src="./images/booking-system/thanks.png" alt="thank you screens">
+    </div>
+    <script src="./jquery.min.js"></script>
+    <script>
+        $(window).load(function () {
+            // Animate loader off screen
+            $(".loader").fadeOut("slow");
+            $(".load-main").removeClass("slow");
+        });
+        // $("#loader").show();
+        // var nImages = $("#body").length;
+        // var loadCounter = 0;
+        // //binds onload event listner to images
+        // $("#body").on("load", function () {
+        //     loadCounter++;
+        //     if (nImages == loadCounter) {
+        //         $(this).parent().show();
+        //         $("#loader").hide();
+        //     }
+        // }).each(function () {
+
+        //     // attempt to defeat cases where load event does not fire
+        //     // on cached images
+        //     if (this.complete) $(this).trigger("load");
+        // });
+        $(function () {
+            $(".startTyper").typed({
+                strings: ["01MB", "01MB"],
+                typeSpeed: 30, // typing speed
+                backDelay: 100, // pause before backspacing
+                loop: true, // loop on or off (true or false)
+                loopCount: false, // number of loops, false = infinite
+            });
+        });
+    </script>
+</body>
+
+</html>
